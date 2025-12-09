@@ -1,5 +1,13 @@
 nums=[10,3,9,7,4]
 
-nums.sort()
+largest=float("-inf")
+largest_2=float("-inf")
 
-print(nums[-2])
+for num in nums:
+    if num>largest:
+        largest_2=largest
+        largest=num
+    elif num>largest_2 and num!=largest:
+        largest_2=num
+
+print(largest_2)
